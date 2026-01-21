@@ -1,0 +1,207 @@
+.front-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.role-box {
+  position: relative;
+  padding: 60px 120px;
+  min-width: 90%;
+  max-width: 90%;
+  border: 5px dashed rgba(255, 0, 0, 0.35);
+box-sizing: border-box;
+  color: #000000;
+  margin: 20px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.role-box h1 {
+  font-size: 120px;
+  font-weight: 800;
+
+  color: red;
+}
+
+.role-box p {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  /* outline: 1px solid red; */
+  width: 100%;
+text-align: justify;
+  /* margin-left: auto;
+  margin-right: auto; */
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Handles */
+.handle {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  font-weight: bolder;
+  /* width: 100%; */
+  background: red;
+
+}
+
+
+
+/* Top row */
+.tl {
+  top: -7px;
+  left: -7px;
+}
+
+.tc {
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tr {
+  top: -7px;
+  right: -7px;
+}
+
+/* Bottom row */
+.bl {
+  bottom: -6px;
+  left: -6px;
+}
+
+.bc {
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.br {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.projects {
+  position: relative;
+}
+
+.f-role {
+  color: #000;
+  display: inline;
+  margin-left: 5rem;
+  position: relative;
+  top: 0rem;
+  font-weight: bold;
+  font-size: 4rem;
+  max-width: 100%;
+  text-transform: capitalize;
+}
+
+.project {
+  color: red;
+  font-family: "Allison", cursive;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 5rem;
+  z-index: 4;
+  position: absolute;
+  top: 0.8rem;
+  left: 14rem;
+  /* padding-left: 2rem; */
+  width: 300px;
+  /* outline: 1px solid red; */
+
+
+  text-transform: capitalize;
+}
+@media (max-width: 600px) {
+
+  .front-end {
+    padding: 1rem;
+  }
+
+  .role-box {
+    padding: 2.5rem 1.5rem;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .role-box h1 {
+    font-size: 3rem; /* was 120px */
+    text-align: center;
+  }
+
+  .role-box p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* Handles smaller */
+  .handle {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  /* ---- PROJECT TITLE ---- */
+  .f-role {
+    margin-left: 0;
+    font-size: 3.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .project {
+    position: static;
+    font-size: 2.7rem;
+    width: auto;
+    z-index: 11;
+    font-weight: 500;
+    margin-left: 13rem;
+    margin-top: -2rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .role-box {
+    padding: 3.5rem 3rem;
+    min-width: 95%;
+    max-width: 95%;
+  }
+
+  .role-box h1 {
+    font-size: 4.5rem;
+  }
+
+  .role-box p {
+    font-size: 1.3rem;
+  }
+
+  /* ---- PROJECT TITLE ---- */
+  .f-role {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  .project {
+    font-size: 3.5rem;
+    left: 8rem;
+    top: 0.5rem;
+  }
+}

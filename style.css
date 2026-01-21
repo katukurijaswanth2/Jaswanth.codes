@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    background-color: #000;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* .logo-pic{
+    height: 50px;
+    width: 95px;
+    padding: 2px;
+    border-radius: 5px;
+ box-sizing: border-box;
+}
+.logo-pic img{
+    height: 100%;
+    width: 100%;
+
+} */
+
+nav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    /* padding: 1rem 3rem; */
+    height: auto;
+    color: #000000;
+    border-radius: 3rem;
+    width: 75%;
+    /* max-width: 100%; */
+    animation: navdisplay 1s ease-in 1;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    /* margin-bottom: 15rem; */
+    background-color: #ffffff;
+    /* background: transparent; */
+
+    backdrop-filter: blur(30px);
+    /* border: 1px solid white; */
+    -webkit-backdrop-filter: blur(20px);
+
+}
+
+/* --- Container Styling --- */
+/* --- Container Styling --- */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    list-style-type: none;
+    column-gap: 2rem;
+    padding: 0;
+}
+
+.contact li {
+    text-transform: uppercase;
+    font-weight: 800;
+    /* padding-bottom: -2px */
+}
+
+
+/* =========================================
+   STANDARD NAV LINKS (The Swoosh Effect)
+   ========================================= */
+
+/* base style for all links in the nav */
+.contact a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+    /* Needed for pseudo-element placement */
+    overflow: hidden;
+    /* hides the pseudo-element when out of bounds */
+    padding: 10px 18px;
+    display: inline-block;
+    transition: color 0.4s ease;
+    /* margin-bottom: -8px; */
+}
+
+/* The sliding background shape */
+.contact a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(182deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 28, 1) 47%, rgba(240, 103, 114, 1) 100%);
+    /* Curved top, flat bottom */
+    border-radius: 50% 50% 0 0;
+    width: 150%;
+    height: 300%;
+    left: -25%;
+    /* Start hidden below */
+    top: 100%;
+    transition: top 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* Hover state for standard links */
+.contact a:hover {
+    color: #ffffff;
+}
+
+.contact a:hover::before {
+    /* Move shape up to cover link */
+    top: -60%;
+}
+
+
+/* =========================================
+   RESUME BUTTON SPECIFICS (No Hover Effect)
+   ========================================= */
+
+/* 1. Define the static style of the resume button */
+/* We use 'a.resume' to make sure these styles override the generic 'a' styles above */
+.contact a.resume {
+    /* Override default color to be always white */
+    color: #ffffff;
+    font-weight: 700;
+    /* Apply the gradient directly to the button background */
+    background-color: red;
+    padding: 8px 16px;
+    /* Adjusted slightly for better button proportions */
+    border-radius: 6px;
+}
+
+/* 2. KILL THE HOVER EFFECT */
+/* This is the most important part. We tell the browser NOT to generate
+   the pseudo-element for the link that has the 'resume' class. */
+.contact a.resume::before {
+    content: none;
+    display: none;
+}
+
+/* Optional: Ensure color stays white on hover (sometimes browsers shift it slightly) */
+.contact a.resume:hover {
+    color: #ffffff;
+    /* If you want a subtle effect to show it's clickable, uncomment below */
+    /* opacity: 0.9; */
+}
+
+/* ----------------------sertvice styles starts here ------------------------- */
+
+.service-heading {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+    width: 100%;
+    /* background-color: #E1E1D7; */
+
+}
+
+.table-of {
+    color: #000;
+    display: inline;
+    margin-left: 5rem;
+    position: relative;
+    top: 0rem;
+    font-weight: bold;
+    font-size: 6rem;
+    max-width: 100%;
+    /* outline: 2px solid indigo; */
+}
+
+.service-content {
+    /* color: #7ac943; */
+    color: red;
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+
+    font-size: 5rem;
+    z-index: 4;
+    position: absolute;
+    top: 1.9rem;
+    left: 21rem;
+    padding-left: 2rem;
+    width: 300px;
+
+
+    text-transform: capitalize;
+    /* outline: 2px solid rgb(13, 24, 232); */
+
+}
+
+.service {
+    height: auto;
+}
+
+.parent-role {
+    /* padding: 6.7rem; */
+    /* padding-bottom: 0rem;
+    padding-top: 0rem; */
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 1rem; */
+}
+
+
+.roles-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #000;
+    box-sizing: border-box;
+
+    /* justify-content: center; */
+    align-items: center;
+    height: auto;
+    /* outline: 2px solid red; */
+    /* padding-left: 2rem; */
+    column-gap: 5rem;
+    row-gap: 2rem;
+    /* margin-bottom: 1rem; */
+    /* padding: 10px; */
+
+
+    padding-bottom: 5rem;
+    padding-top: 0;
+
+}
+
+.role-card {
+    /* background: #ffffff; */
+    background-color: #000;
+    /* padding: 1rem; */
+    border-radius: 12px;
+    /* box-shadow: 0 6px 16px rgba(0,0,0,0.1); */
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    width: 30rem;
+
+    /* margin-left: 2rem; */
+
+    margin-left: 0rem;
+    /* outline: 2px solid red; */
+
+
+}
+
+.role-number {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    font-size: 12rem;
+    font-weight: bold;
+    color: rgba(216, 212, 212, 0.374);
+}
+
+.role-title {
+    position: relative;
+    top: -0.5rem;
+    left: 1.1rem;
+    margin-top: 35px;
+    /* font-size: 10rem; */
+    /* font-size: 2rem; */
+    font-weight: 600;
+    z-index: 3;
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 100%;
+
+    /* outline: 1px solid red; */
+}
+
+.roleTitle1 {
+    /* color: #000; */
+    color: white;
+
+    position: relative;
+    left: 4rem;
+    top: 3rem;
+    font-weight: bold;
+    font-size: 6rem;
+    /* text-transform: uppercase; */
+}
+
+.roleTitle2 {
+    /* color: #7ac943; */
+    color: red;
+    font-family: "Allison", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5rem;
+    z-index: 4;
+    position: absolute;
+    bottom: -4.3rem;
+    left: 20rem;
+}
+
+@media (max-width: 600px) {
+
+    .service {
+        width: 100%;
+        padding: 1.5rem 1rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-heading {
+        text-align: center;
+        /* margin-bottom: 2rem; */
+    }
+
+    .table-of {
+        display: block;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-left: -2rem;
+    }
+
+    .service-content {
+
+        font-size: 2.8rem;
+        font-family: "Allison", cursive;
+        color: red;
+        position: static;
+        margin-left: 5rem;
+        margin-top: -2.5rem;
+    }
+
+    /* ---------- ROLES CONTAINER ---------- */
+    .parent-role {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: content-box;
+        /* padding: 0px; */
+    }
+
+    .roles-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* ---------- ROLE CARD ---------- */
+    .role-card {
+        position: relative;
+        width: 100%;
+        /* padding: 2.5rem 1.5rem 3.5rem; */
+        box-sizing: border-box;
+        /* overflow: hidden; */
+    }
+
+    .role-number {
+        position: absolute;
+        top: -5px;
+        left: 5px;
+        font-size: 6rem;
+        font-weight: 700;
+        color: rgba(216, 212, 212, 0.4);
+    }
+
+    .role-title {
+        position: relative;
+        margin-top: 2.5rem;
+    }
+
+    .roleTitle1 {
+        display: block;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-left: 2.4rem;
+        margin-top: 0rem;
+        position: static;
+        white-space: nowrap;
+    }
+
+    .roleTitle2 {
+        /* display: block; */
+        font-size: 2.2rem;
+        font-family: "Allison", cursive;
+        color: red;
+        margin-top: -0.5rem;
+        white-space: nowrap;
+        position: static;
+        margin-top: 1rem;
+        margin-left: -2rem;
+    }
+
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    .parent-role{
+        padding: 0;
+        margin-top: 1rem;
+    }
+}
+
+/* -----------------service heading ends here ------------------*/
+
+
+
+/* ------------------------------service roles in box start here --------------------*/
+
+
+/* ==========================================up arrow ======================*/
+
+
+.up-arrow {
+    position: fixed;
+    bottom: 2.3rem;
+    right: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: conic-gradient(rgb(9, 255, 34) 0deg, #000000 0deg);
+}
+
+.progress-ring {
+    position: absolute;
+    inset: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.up-arrow img {
+    position: relative;
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+    z-index: 100;
+    /* 🔥 must be higher */
+}

@@ -1,0 +1,69 @@
+.project-lists,
+.javaBackend-projects,.fullStackProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  overflow-x: hidden;
+  max-width: 90%;
+  /* 🔥 CONTROL SIZE */
+  margin: 2rem auto;
+  /* center horizontally */
+  padding: 2rem;
+
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+
+.project-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  /* width: 420px; */
+  /* max-width: 420px; */
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+
+
+.project-image img {
+  width: 100%;
+  height: 200px;
+object-fit: initial;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.project-links a.live {
+  background: #e10600;
+}

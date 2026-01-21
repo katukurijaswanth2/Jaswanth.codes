@@ -1,0 +1,304 @@
+/* ===== ABOUT SECTION ===== */
+#About-Me {
+    position: relative;
+    /* IMPORTANT for arrow positioning */
+    width: 100%;
+    background-color:white;
+    min-height: 77vh;
+}
+
+/* ===== TITLE ===== */
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-dark {
+    color: #000;
+    font-weight: bold;
+    font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.title-cruve {
+    color: red;
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+
+    text-transform: capitalize;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.matter {
+    height: 71vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.matter-inside {
+    margin: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 6px dashed red; */
+    /* background-color: #000;
+    color: white; */
+}
+
+/* ===== TEXT CONTENT ===== */
+.about-me-content {
+    width: 50%;
+}
+
+.hello {
+    font-size: clamp(4rem, 10vw, 10rem);
+}
+
+.about-jk {
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-transform: capitalize;
+}
+
+.about-me-content p {
+    font-size: 1.1rem;
+    line-height: 30px;
+    max-width: 90%;
+    position: relative;
+}
+
+/* ===== ARROW ===== */
+.arrow {
+    position: absolute;
+    bottom: 5%;
+    right: 37%;
+
+    height: 10rem;
+    width: clamp(10rem, 10vw, 7rem);
+    z-index: 10;
+    transform: rotate(10deg);
+}
+
+.arrow img {
+    height: 100%;
+    width: 100%;
+    object-fit: full;
+}
+
+/* ===== IMAGE ===== */
+.image {
+    height: 30rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .matter {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .about-me-content,
+    .image {
+        width: 90%;
+    }
+
+    .about-me-content p {
+        max-width: 100%;
+    }
+}
+/* last========================================================== */
+/*======================= mobile ===================== */
+@media (max-width: 600px) {
+
+    #About-Me {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+
+    /* Title fix */
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .title-cruve {
+        left: 72%;
+        font-size: 3rem;
+    }
+
+    /* Stack layout */
+    .matter {
+        height: auto;
+    }
+
+    .matter-inside {
+        /* flex-direction: column; */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0;
+    }
+
+    .about-me-content {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        /* flex-direction: column; */
+        /* justify-content: star; */
+    }
+
+    .hello {
+        font-size: 4rem;
+        /* padding-left: -10rem; 
+        */
+        display: block;
+
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+
+
+    }
+
+    .about-jk {
+        font-size: 1.5rem;
+        display: block;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        align-items: center;
+    }
+
+    .about-me-content p {
+        font-size: 1rem;
+        line-height: 26px;
+        max-width: 100%;
+    text-align: justify;
+    margin-top: 1rem;
+    }
+
+    /* Hide arrow */
+    .arrow {
+        /* display: none; */
+        top:60%;
+        transform: rotate(70deg);
+        left: 2rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    /* Image resize */
+    .image {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .image img {
+        width: 85%;
+        height: 20rem;
+        /* object-fit: contai; */
+        /* transform: scale(5); */
+    }
+}
+/* tablet responsive  */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    #About-Me {
+        min-height: auto;
+        padding: 60px 30px;
+    }
+
+    /* Title alignment */
+    .title-cruve {
+        left: 65%;
+        font-size: 4rem;
+    }
+
+    .matter {
+        height: auto;
+    }
+
+    .matter-inside {
+        /* flex-direction: column */
+        display: flex;
+        gap: 40px;
+        margin: 10px;
+    }
+
+    .about-me-content {
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+
+    .hello {
+        font-size: 6rem;
+        display: block;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .about-jk {
+        font-size: 1.5rem;
+        display: block;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .about-me-content p {
+        font-size: 1.05rem;
+        line-height: 1.6rem;
+        max-width: 100%;
+        text-align: justify;
+        margin-top: 10px;
+    }
+
+    /* Optional: hide arrow on tablet */
+    .arrow {
+        /* display: none; */
+        bottom: 3.5rem;
+        left: 50%;
+    transform: rotate(-10deg);
+    }
+
+    .image {
+        width: 60%;
+        height: 30rem;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}

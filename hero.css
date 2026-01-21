@@ -1,0 +1,281 @@
+.hero {
+    width: 100%;
+    max-width: 100%;
+   max-height: 37rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+    /* margin-top: 3rem; */
+    padding-bottom: 4rem;
+    /* height: vh; */
+    /* background: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.hero h1 {
+    padding: 0px 40px;
+}
+
+
+/* ================= IM ================= */
+
+.im {
+    animation: riseUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.im h1 {
+    font-size: 5rem;
+    font-family: "Cormorant SC", serif;
+    font-weight: bolder;
+    font-style: normal;
+    padding-left: 10rem;
+}
+
+/* ================= NAME ================= */
+
+.name {
+    animation: riseUp 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.name h1 {
+    font-size: 15rem;
+    margin-bottom: 1rem;
+    font-family: "Cormorant SC", serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+/* ================= STARTER ================= */
+
+.starter {
+    animation: riseUp 1s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.starter span {
+    font-size: 2.3rem;
+    color: white;
+    text-align: right;
+    width: 95%;
+    max-width: 100%;
+    font-family: "Birthstone", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    padding-right: 1rem;
+   
+ 
+}
+
+.starter span {
+    margin-right: 3rem;
+}
+
+/* ================= LINKS ================= */
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    width: 95%;
+    max-width: 100%;
+    padding-left: 7rem;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.links i {
+    padding: 0.6rem;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    font-size: 2rem;
+    opacity: 0;
+    animation: slideIn 0.8s ease-out forwards;
+    transition: transform 1.4s ease-in-out, background-color 0.3s, color 0.3s;
+}
+
+.links i:hover {
+    background-color: #000000;
+    color: aliceblue;
+    transform: scale(1.8) rotate(-15deg);
+}
+
+/* Staggered delays */
+.links i:nth-child(1) {
+    animation-delay: 1.8s;
+}
+
+.links i:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.links i:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+.links i:nth-child(4) {
+    animation-delay: 2.4s;
+}
+
+.links i:nth-child(5) {
+    animation-delay: 2.6s;
+}
+
+/* ================= MARQUEE ================= */
+
+
+/* ================= HERO IMAGE ================= */
+.hero-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+    height: 40rem;
+    width: 30rem;
+    /* outline: 2px solid yellow; */
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.hero-img img {
+    height: 90%;
+    max-width: 85%;
+    animation: imageRise 1.5s ease-out forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+    display: block;
+}
+
+/* BLACK SHADE OVER IMAGE */
+.hero-img img ::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+    );
+    z-index: 4;
+    pointer-events: none;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes riseUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageRise {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 7rem;
+    }
+
+    .im {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .im {
+        font-size: 3rem;
+    }
+
+    .name {
+        font-size: 7rem;
+    }
+
+    .starter {
+        font-size: 1.2rem;
+    }
+}
+
+/* ================= DEBUG ================= */
+
+/* * {
+    outline: 1px solid red;
+} */
