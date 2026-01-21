@@ -427,6 +427,7 @@ nav {
         position: fixed;
         bottom: 0rem;
         right: 0.5rem;
+        z-index: 1000;
     }
 
 }
