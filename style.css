@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+}
 
 .nav-bar {
     display: flex;
@@ -195,6 +200,7 @@ nav {
     left: 21rem;
     padding-left: 2rem;
     width: 300px;
+    
 
 
     text-transform: capitalize;
@@ -206,6 +212,12 @@ nav {
     height: auto;
 }
 
+.parent-role1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+}
 .parent-role {
     /* padding: 6.7rem; */
     /* padding-bottom: 0rem;
@@ -343,8 +355,9 @@ nav {
         font-family: "Allison", cursive;
         color: red;
         position: static;
-        margin-left: 5rem;
-        margin-top: -2.5rem;
+        padding-left: 12rem;
+        /* margin-left: 5rem; */
+        margin-top: -2.9rem;
     }
 
     /* ---------- ROLES CONTAINER ---------- */
@@ -354,6 +367,8 @@ nav {
         justify-content: center;
         box-sizing: content-box;
         /* padding: 0px; */
+        margin: 0;
+        padding: 0;
     }
 
     .roles-container {
@@ -398,7 +413,8 @@ nav {
 
     .roleTitle2 {
         /* display: block; */
-        font-size: 2.2rem;
+        font-size: 2.5rem;
+        font-weight: 500;
         font-family: "Allison", cursive;
         color: red;
         margin-top: -0.5rem;
@@ -406,6 +422,11 @@ nav {
         position: static;
         margin-top: 1rem;
         margin-left: -2rem;
+    }
+    .up-arrow{
+        position: fixed;
+        bottom: 0rem;
+        right: 0.5rem;
     }
 
 }
