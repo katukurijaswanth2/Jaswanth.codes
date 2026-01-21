@@ -76,7 +76,7 @@ const skills = [
   },
   {
     name: "MVC Architecture",
-    image: "images/mvc.jpeg"
+    image: "images/mvc.svg"
   },
   {
     name: "React.js",
