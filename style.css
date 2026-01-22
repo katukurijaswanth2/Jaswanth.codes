@@ -6,7 +6,7 @@
 body{
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid yellow;
+ 
 }
 
 .nav-bar {
@@ -26,18 +26,7 @@ body{
 
 }
 
-/* .logo-pic{
-    height: 50px;
-    width: 95px;
-    padding: 2px;
-    border-radius: 5px;
- box-sizing: border-box;
-}
-.logo-pic img{
-    height: 100%;
-    width: 100%;
 
-} */
 
 nav {
 
@@ -216,7 +205,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .parent-role {
     /* padding: 6.7rem; */
@@ -228,6 +217,7 @@ nav {
     padding: 20px;
     display: flex;
     justify-content: center;
+    background-color: #000;
     /* margin-bottom: 1rem; */
 }
 
@@ -331,7 +321,7 @@ nav {
 
     .service {
         width: 100%;
-        padding: 1.5rem 1rem;
+        /* padding: 1.5rem 1rem; */
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -343,10 +333,10 @@ nav {
     }
 
     .table-of {
-        display: block;
+        /* display: block; */
         font-size: 3.5rem;
         font-weight: 700;
-        margin-left: -2rem;
+        margin-left: -1rem;
     }
 
     .service-content {
@@ -355,7 +345,7 @@ nav {
         font-family: "Allison", cursive;
         color: red;
         position: static;
-        padding-left: 12rem;
+        padding-left: 14rem;
         /* margin-left: 5rem; */
         margin-top: -2.9rem;
     }
@@ -370,7 +360,10 @@ nav {
         margin: 0;
         padding: 0;
     }
-
+.parent-role1{
+    min-width: 100%;
+    margin-top: 0.7rem;
+}
     .roles-container {
         width: 100%;
         display: flex;
@@ -390,7 +383,7 @@ nav {
     .role-number {
         position: absolute;
         top: -5px;
-        left: 5px;
+        left: 17px;
         font-size: 6rem;
         font-weight: 700;
         color: rgba(216, 212, 212, 0.4);
@@ -399,21 +392,25 @@ nav {
     .role-title {
         position: relative;
         margin-top: 2.5rem;
+        /* width: 3rem; */
+        max-width: 300px;
+        box-sizing: border-box;
+        /* border: 1px solid blue; */
     }
 
     .roleTitle1 {
         display: block;
         font-size: 3rem;
         font-weight: 700;
-        margin-left: 2.4rem;
-        margin-top: 0rem;
+        margin-left: 3rem;
+        margin-top: 7px;
         position: static;
         white-space: nowrap;
     }
 
     .roleTitle2 {
         /* display: block; */
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 500;
         font-family: "Allison", cursive;
         color: red;
@@ -421,7 +418,7 @@ nav {
         white-space: nowrap;
         position: static;
         margin-top: 1rem;
-        margin-left: -2rem;
+        margin-left: -2.3rem;
     }
     .up-arrow{
         position: fixed;

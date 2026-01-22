@@ -67,3 +67,20 @@ object-fit: initial;
 .project-links a.live {
   background: #e10600;
 }
+
+@media (max-width: 600px){
+  .project-lists,
+.javaBackend-projects,.fullStackProjects{
+  margin: 0;
+  min-width: 100%;
+  margin-top: 1rem;
+}
+.project{
+  position: static;
+  padding-left: 14rem;
+
+   margin-top: -2.2rem; 
+}
+}
+
+
