@@ -421,10 +421,13 @@ nav {
         margin-left: -2.3rem;
     }
     .up-arrow{
-        position: fixed;
-        bottom: 0rem;
-        right: 0.5rem;
+        /* position: fixed; */
+        /* bottom: 0rem;
+        right: 0.5rem; */
         z-index: 1000;
+        height: 0.2rem;
+        width: 0.2rem;
+        box-sizing: content-box;
     }
 
 }

@@ -98,7 +98,7 @@
 /* ================= PROFILE IMAGE ================= */
 
 .profile-image {
-    height: 50dvh;
+    height: 60dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,8 +108,8 @@
 }
 
 .profile-image img {
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -198,4 +198,5 @@
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: italic;
+    /* padding-bottom: 20px; */
 }
