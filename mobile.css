@@ -10,6 +10,9 @@
     .mobile-hero{
         display: block;
     }
+    .large-screen{
+        display: none;
+    }
 }
 
 /* ================= PROFILE CARD ================= */
