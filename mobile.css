@@ -22,7 +22,7 @@
     border-radius: 24px 24px 0px 0px;
     overflow: hidden;
     background: #fff;
-    height: 105dvh;
+    height: 100dvh;
     position: relative;
 }
 
@@ -79,6 +79,10 @@
 
 .contactm li {
     padding: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+  
     /* margin-left: 1rem; */
 }
 
@@ -87,7 +91,10 @@
     text-decoration: none;
     color: white;
 }
-
+.contactm .resume{
+    background-color: red;
+   
+}
 .contactm i {
     /* margin-left: 1rem; */
     font-weight: bolder;
@@ -101,7 +108,7 @@
 /* ================= PROFILE IMAGE ================= */
 
 .profile-image {
-    height: 60dvh;
+    height: 55dvh;
     display: flex;
     justify-content: center;
     align-items: center;

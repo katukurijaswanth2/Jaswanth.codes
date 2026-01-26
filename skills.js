@@ -58,18 +58,19 @@ const skills = [
   {
     name: "JUnit",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-plain-wordmark.svg"
-          
+
   },
- 
+
   {
     name: "Data Structures",
     image: "images/dsa.svg"
   }
   ,
- 
+
   {
     name: "intellij",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"},
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"
+  },
   {
     name: "Clean Code",
     image: "images/cleancode.svg"
@@ -89,8 +90,8 @@ const skills = [
 ];
 
 
-            // <img src="" />
-          
+
+
 const skillsContainer = document.getElementById("mySkills");
 
 skills.forEach(skill => {
@@ -102,3 +103,4 @@ skills.forEach(skill => {
     </div>
   `;
 });
+

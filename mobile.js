@@ -1,6 +1,6 @@
  const hamburger = document.querySelector(".hamburger");
         const contactParent = document.querySelector(".contact-parent");
-        const closeIcon = document.querySelector(".contact i.fa-x");
+        const closeIcon = document.querySelector(".contactm i.fa-x");
 
         // Open menu
         hamburger.addEventListener("click", () => {

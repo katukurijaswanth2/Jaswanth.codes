@@ -428,6 +428,7 @@ nav {
         height: 0.2rem;
         width: 0.2rem;
         box-sizing: content-box;
+        /* display: none; */
     }
 
 }
