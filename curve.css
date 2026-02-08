@@ -97,12 +97,24 @@ body {
   font-weight: 600;
 }
 
+.growth{
+    padding-left: 18rem;
+    padding-top: 2rem;
+}
+
+
+
+
 /* ================= Mobile ================= */
 
 @media (max-width: 768px) {
   .growth-curve {
     padding: 60px 10px;
   }
+.growth{
+    padding-left: 2.8rem;
+    padding-top: 1rem;
+}
 
   .growth-curve h1 {
     font-size: 24px;

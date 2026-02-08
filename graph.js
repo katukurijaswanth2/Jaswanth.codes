@@ -63,6 +63,41 @@ const growthData = [
 
 const tooltip = d3.select("#growth-tooltip");
 
+/* ================= Helper: Tooltip Position ================= */
+
+function positionTooltip(x, y) {
+  const tooltipWidth = 260;
+  const tooltipHeight = 130;
+  const padding = 12;
+
+  let left = x + 15;
+  let top = y - 20;
+
+  /* Prevent right overflow */
+  if (left + tooltipWidth > window.innerWidth) {
+    left = window.innerWidth - tooltipWidth - padding;
+  }
+
+  /* Prevent left overflow (MOBILE FIX) */
+  if (left < padding) {
+    left = padding;
+  }
+
+  /* Prevent bottom overflow */
+  if (top + tooltipHeight > window.innerHeight) {
+    top = window.innerHeight - tooltipHeight - padding;
+  }
+
+  /* Prevent top overflow */
+  if (top < padding) {
+    top = padding;
+  }
+
+  tooltip
+    .style("left", left + "px")
+    .style("top", top + "px");
+}
+
 /* ================= Draw Function ================= */
 
 function drawGrowthCurve() {
@@ -142,7 +177,7 @@ function drawGrowthCurve() {
     .attr("class", "curve")
     .attr("d", line);
 
-  /* ===== Dots + Tooltip ===== */
+  /* ===== Dots + Tooltip (Mouse + Touch) ===== */
 
   svg.selectAll(".dot")
     .data(growthData)
@@ -152,7 +187,7 @@ function drawGrowthCurve() {
     .attr("cx", d => x(d.stage))
     .attr("cy", d => y(d.value))
     .attr("r", 6)
-    .on("mouseover", (event, d) => {
+    .on("mouseenter touchstart", (event, d) => {
       tooltip
         .style("opacity", 1)
         .html(`
@@ -162,27 +197,15 @@ function drawGrowthCurve() {
           <small>${d.year}</small><br/>
           <small>${d.desc}</small>
         `);
+
+      const point = event.touches ? event.touches[0] : event;
+      positionTooltip(point.clientX, point.clientY);
     })
-    .on("mousemove", (event) => {
-      const tooltipWidth = 260;
-      const tooltipHeight = 120;
-
-      let xPos = event.clientX + 15;
-      let yPos = event.clientY - 20;
-
-      if (xPos + tooltipWidth > window.innerWidth) {
-        xPos = event.clientX - tooltipWidth - 15;
-      }
-
-      if (yPos + tooltipHeight > window.innerHeight) {
-        yPos = window.innerHeight - tooltipHeight - 10;
-      }
-
-      tooltip
-        .style("left", xPos + "px")
-        .style("top", yPos + "px");
+    .on("mousemove touchmove", (event) => {
+      const point = event.touches ? event.touches[0] : event;
+      positionTooltip(point.clientX, point.clientY);
     })
-    .on("mouseout", () => {
+    .on("mouseleave touchend touchcancel", () => {
       tooltip.style("opacity", 0);
     });
 }
