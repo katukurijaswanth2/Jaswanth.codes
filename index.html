@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="skill.css">
     <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="curve.css">
     <link rel="stylesheet" href="largeScreen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+      <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Birthstone&family=Cormorant+SC:wght@400;600&family=Fleur+De+Leah&family=Lavishly+Yours&family=Trade+Winds&family=Meie+Script&family=Lugrasimo&display=swap"
@@ -198,6 +200,17 @@
 
     <!-- --------------------about me end here------------------------->
 
+<section class="growth-curve">
+  <div class="d3-chart">
+    <h1>My Growth Curve</h1>
+    <p class="subtitle">Progress isn’t linear — commitment is.</p>
+
+    <div id="growth-chart"></div>
+  </div>
+
+  <div class="tooltip" id="growth-tooltip"></div>
+</section>
+
 
     <!-- -------skills here -- -->
     <section id="skills">
@@ -341,6 +354,7 @@
 
     </script>
     <script src="scrollUp.js"></script>
+   <script src="graph.js"></script>
 
 
 

@@ -1,0 +1,119 @@
+/* ================= GLOBAL SAFETY FIX ================= */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ================= Growth Curve Section ================= */
+
+.growth-curve {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.growth-curve .d3-chart {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.growth-curve h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.growth-curve .subtitle {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/* ================= SVG ================= */
+
+.growth-curve svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.growth-curve .axis path,
+.growth-curve .axis line {
+  stroke: #333;
+}
+
+.growth-curve .axis text {
+  fill: #777;
+  font-size: 12px;
+}
+
+/* ================= Curve ================= */
+
+.growth-curve .curve {
+  fill: none;
+  stroke: url(#line-gradient);
+  stroke-width: 4;
+}
+
+/* ================= Dots ================= */
+
+.growth-curve .dot {
+  fill: #ffffff;
+  stroke: #ff2d2d;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.growth-curve .dot:hover {
+  fill: #ff2d2d;
+}
+
+/* ================= Tooltip ================= */
+
+.growth-curve .tooltip {
+  position: fixed;
+  background: #111;
+  border: 1px solid #ff2d2d;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #fff;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(255, 45, 45, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+  max-width: 260px;
+  box-sizing: border-box;
+}
+
+.growth-curve .tooltip span {
+  color: #ff2d2d;
+  font-weight: 600;
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 768px) {
+  .growth-curve {
+    padding: 60px 10px;
+  }
+
+  .growth-curve h1 {
+    font-size: 24px;
+  }
+
+  .growth-curve .subtitle {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  .growth-curve .axis text {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Growth Curve</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .d3-chart {
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    svg {
+      overflow: visible;
+    }
+
+    .axis path,
+    .axis line {
+      stroke: #333;
+    }
+
+    .axis text {
+      fill: #777;
+      font-size: 12px;
+    }
+
+    .curve {
+      fill: none;
+      stroke: url(#line-gradient);
+      stroke-width: 4;
+    }
+
+    .dot {
+      fill: #fff;
+      stroke: #ff2d2d;
+      stroke-width: 2;
+      cursor: pointer;
+    }
+
+    .dot:hover {
+      fill: #ff2d2d;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: #111;
+      border: 1px solid #ff2d2d;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      pointer-events: none;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 45, 45, 0.3);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .tooltip span {
+      color: #ff2d2d;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d3-chart">
+    <h1>My Growth Curve</h1>
+    <p class="subtitle">Progress isn’t linear — commitment is.</p>
+
+    <div id="chart"></div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const data = [
+      {
+        stage: "10th",
+        year: "2017–18",
+        value: 2,
+        title: "Secondary Education",
+        subtitle: "Class 10",
+        desc: "Built academic foundation and self-discipline"
+      },
+      {
+        stage: "Intermediate",
+        year: "2018–20",
+        value: 4,
+        title: "Intermediate",
+        subtitle: "MPC",
+        desc: "Improved consistency and subject clarity"
+      },
+      {
+        stage: "B.Sc",
+        year: "2020–23",
+        value: 3.5,
+        title: "Bachelor’s Degree",
+        subtitle: "B.Sc",
+        desc: "Balanced academics with skill development"
+      },
+      {
+        stage: "Teaching",
+        year: "2021–23",
+        value: 6,
+        title: "Teaching Experience",
+        subtitle: "Home Tutor & School Educator",
+        desc: "Developed communication, mentoring, and responsibility"
+      },
+      {
+        stage: "MCA – Year 1",
+        year: "2023–24",
+        value: 8,
+        title: "Post Graduation",
+        subtitle: "MCA + Professional Work",
+        desc: "Computer Science Teacher & Web Developer at Greenwood (parallel with MCA)"
+      },
+      {
+        stage: "MCA – Final",
+        year: "2024–25",
+        value: 9,
+        title: "Post Graduation",
+        subtitle: "MCA – Final Year",
+        desc: "Advanced CS concepts while continuing teaching & development work"
+      },
+      {
+        stage: "Full Stack Java",
+        year: "2025",
+        value: 10,
+        title: "Industry Preparation",
+        subtitle: "AchieversIT, Hyderabad",
+        desc: "Full Stack Java development with real-world project focus"
+      }
+    ];
+
+    const margin = { top: 20, right: 20, bottom: 50, left: 40 };
+    const width = 900 - margin.left - margin.right;
+    const height = 450 - margin.top - margin.bottom;
+
+    const svg = d3
+      .select("#chart")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const defs = svg.append("defs");
+
+    const gradient = defs
+      .append("linearGradient")
+      .attr("id", "line-gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "0%");
+
+    gradient.append("stop").attr("offset", "0%").attr("stop-color", "#ff2d2d");
+    gradient.append("stop").attr("offset", "100%").attr("stop-color", "#ffffff");
+
+    const x = d3
+      .scalePoint()
+      .domain(data.map(d => d.stage))
+      .range([0, width])
+      .padding(0.5);
+
+    const y = d3
+      .scaleLinear()
+      .domain([0, 10])
+      .range([height, 0]);
+
+    svg
+      .append("g")
+      .attr("class", "axis")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x));
+
+    svg
+      .append("g")
+      .attr("class", "axis")
+      .call(d3.axisLeft(y).ticks(5));
+
+    const line = d3
+      .line()
+      .x(d => x(d.stage))
+      .y(d => y(d.value))
+      .curve(d3.curveCatmullRom.alpha(0.5));
+
+    svg
+      .append("path")
+      .datum(data)
+      .attr("class", "curve")
+      .attr("d", line);
+
+    const tooltip = d3.select("#tooltip");
+
+    svg
+      .selectAll(".dot")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("class", "dot")
+      .attr("cx", d => x(d.stage))
+      .attr("cy", d => y(d.value))
+      .attr("r", 6)
+      .on("mouseover", (event, d) => {
+        tooltip
+          .style("opacity", 1)
+          .html(`
+            <span>${d.stage}</span><br/>
+            <strong>${d.title}</strong><br/>
+            <small>${d.subtitle}</small><br/>
+            <small>Timeline: ${d.year}</small><br/>
+            <small>${d.desc}</small>
+          `);
+      })
+      .on("mousemove", event => {
+        tooltip
+          .style("left", event.pageX + 15 + "px")
+          .style("top", event.pageY - 30 + "px");
+      })
+      .on("mouseout", () => {
+        tooltip.style("opacity", 0);
+      });
+  </script>
+</body>
+</html>
