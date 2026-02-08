@@ -108,12 +108,11 @@ body {
 /* ================= Mobile ================= */
 
 @media (max-width: 768px) {
-  .growth-curve {
-    padding: 60px 10px;
-  }
+  
 .growth{
-    padding-left: 2.8rem;
-    padding-top: 1rem;
+    width: 100%;
+    padding-left: 11rem;
+    padding-top: 1.5rem;
 }
 
   .growth-curve h1 {
