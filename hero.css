@@ -1,281 +1,314 @@
-.hero {
+:root {
+    --bg-black: #0a0a0a;
+    --accent-red: #d32f2f;
+    --text-gray: #b0b0b0;
+    --white: #ffffff;
+}
+
+
+
+.hero-container {
+    height: 100vh;
     width: 100%;
-    max-width: 100%;
-   max-height: 37rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+    overflow: hidden;
     position: relative;
-    padding: 0 1rem;
-    /* margin-top: 3rem; */
-    padding-bottom: 4rem;
-    /* height: vh; */
-    /* background: url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
-
-
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0)
-    );
+    background: radial-gradient(circle at top right, #1a1a1a 0%, #0a0a0a 100%);
 }
 
-.hero h1 {
-    padding: 0px 40px;
-}
+/* Navbar Styling */
+.nav-bar {
+    /* position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%); */
 
 
-/* ================= IM ================= */
+    width: 92%;
+    max-width: 1300px;
+    height: 68px;
 
-.im {
-    animation: riseUp 1s ease-out forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
-    width: 100%;
+    padding: 0 3rem;
+
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-around;
+
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 999px;
+    z-index: 100;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
-.im h1 {
-    font-size: 5rem;
-    font-family: "Cormorant SC", serif;
-    font-weight: bolder;
-    font-style: normal;
-    padding-left: 10rem;
+/* *{
+    outline: 1px solid red;
+} */
+.header-baru{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* padding-left: 2rem; */
 }
 
-/* ================= NAME ================= */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    /* background-color: black; */
+    color:var(--bg-black);
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+nav{
+    background-color: #1a1a1a;
+}
+.resume-btn-nav {
+    background: linear-gradient(135deg, #e50914, #ff2b2b);
+    padding: 0.6rem 1.6rem;
+    border-radius: 999px;
+
+    font-weight: 600 !important;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 6px 18px rgba(229, 9, 20, 0.45);
+}
+
+
+/* Hero Content Area */
+.hero-main {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    height: calc(100vh - 100px);
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 5;
+}
+
+.greeting {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 800;
+}
 
 .name {
-    animation: riseUp 1.2s ease-out forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.role {
+    color: var(--accent-red);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.description {
+    max-width: 450px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    width: 60x;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+.social-links i{
+    font-size: 2rem;
+
 }
 
-.name h1 {
-    font-size: 15rem;
-    margin-bottom: 1rem;
-    font-family: "Cormorant SC", serif;
-    font-weight: bolder;
-    font-style: normal;
+.social-links a:hover {
+    background: var(--accent-red);
+    transform: translateY(-3px);
 }
 
-/* ================= STARTER ================= */
+/* Download Button */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 2rem;
+    background: var(--accent-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-.starter {
-    animation: riseUp 1s ease-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
-    width: 100%;
+.download-btn:hover {
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.4);
+}
+
+/* Image and Decorative Glow */
+.hero-image-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
-
+    align-items: flex-end;
 }
 
-.starter span {
-    font-size: 2.3rem;
-    color: white;
-    text-align: right;
-    width: 95%;
-    max-width: 100%;
-    font-family: "Birthstone", cursive;
-    font-weight: 400;
-    font-style: normal;
-    display: inline-block;
-    padding-right: 1rem;
-   
- 
-}
-
-.starter span {
-    margin-right: 3rem;
-}
-
-/* ================= LINKS ================= */
-
-.links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-    width: 95%;
-    max-width: 100%;
-    padding-left: 7rem;
-
-}
-
-.links a {
-    text-decoration: none;
-    color: #000000;
-}
-
-.links i {
-    padding: 0.6rem;
-    border-radius: 50%;
-    background-color: red;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 55px;
-    width: 55px;
-    font-size: 2rem;
-    opacity: 0;
-    animation: slideIn 0.8s ease-out forwards;
-    transition: transform 1.4s ease-in-out, background-color 0.3s, color 0.3s;
-}
-
-.links i:hover {
-    background-color: #000000;
-    color: aliceblue;
-    transform: scale(1.8) rotate(-15deg);
-}
-
-/* Staggered delays */
-.links i:nth-child(1) {
-    animation-delay: 1.8s;
-}
-
-.links i:nth-child(2) {
-    animation-delay: 2s;
-}
-
-.links i:nth-child(3) {
-    animation-delay: 2.2s;
-}
-
-.links i:nth-child(4) {
-    animation-delay: 2.4s;
-}
-
-.links i:nth-child(5) {
-    animation-delay: 2.6s;
-}
-
-/* ================= MARQUEE ================= */
-
-
-/* ================= HERO IMAGE ================= */
-.hero-img {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 40px;
-    box-sizing: border-box;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    pointer-events: none;
-    height: 40rem;
-    width: 30rem;
-    /* outline: 2px solid yellow; */
-    max-width: 100%;
-    overflow: hidden;
-}
-
-/* IMAGE */
-.hero-img img {
+.profile-img {
     height: 90%;
-    max-width: 85%;
-    animation: imageRise 1.5s ease-out forwards;
-    animation-delay: 1.3s;
-    opacity: 0;
-    display: block;
+    object-fit: contain;
+    filter: drop-shadow(-20px 0 50px rgba(0,0,0,0.5));
+    z-index: 2;
 }
 
-/* BLACK SHADE OVER IMAGE */
-.hero-img img ::after {
+/* The Red Curved Line in the background */
+
+.red-glow {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgb(255, 1, 1) 0%, rgba(255, 0, 0, 0) 70%);
+    filter: blur(40px);
+    z-index: 1; /* Sits behind the image */
+}
+.profile-img-wrapper {
+    position: relative;
+    height: 100%;
+    /* top:-4rem; */
+    left:5.6rem;
+    display: flex;
+    align-items: flex-end;
+    z-index: -3;
+    /* outline: 1px solid red; */
+}
+.profile-img {
+    height: 105%;
+    /* margin-top: -2rem; */
+    object-fit: contain;
+    display: block;
+
+    filter: drop-shadow(-30px 0 60px rgba(0, 0, 0, 0.75));
+}
+.profile-img-wrapper::after {
     content: "";
     position: absolute;
     inset: 0;
+
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.55) 35%,
+        rgba(0, 0, 0, 0.25) 60%,
         rgba(0, 0, 0, 0)
     );
-    z-index: 4;
+
     pointer-events: none;
+    z-index: 4;
 }
 
 
-/* ================= ANIMATIONS ================= */
 
-@keyframes riseUp {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* The Red Curve Decorative Element */
+.red-curve {
+    position: relative;
+    bottom: -10%;
+    right: -10%;
+    width: 150px;
+    height: 150px;
+    /* border: 5px solid rgba(255, 5, 5, 0.985); */
+    border-radius: 50%;
+    background-color: #632525;
+    z-index: 1;
 }
 
-@keyframes imageRise {
-    from {
-        opacity: 0;
-        transform: translateY(150px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Elevate hero container above page */
+.hero-container {
+    position: relative;
+    z-index: 100;
+    overflow: visible;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
+/* Star Ray Overlay – overlaps hero container */
+/* .hero-container::after {
+    content: "";
+    position: absolute;
+    inset: -25%;
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+    background:
+        radial-gradient(
+            circle at 72% 42%,
+            rgba(30, 30, 30, 0),
+            rgba(0, 0, 0, 0) 25%,
+            rgba(0, 0, 0, 0.7) 55%
+        ),
+        radial-gradient(
+            circle at 65% 60%,
+            rgba(3, 3, 3, 0.51),
+            rgba(0, 0, 0, 0) 45%
+        ),
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0)
+        );
 
-/* ================= MEDIA QUERIES ================= */
+    filter: blur(90px);
+    opacity: 0.75;
 
-@media (max-width: 768px) {
-    .name {
-        font-size: 7rem;
-    }
-
-    .im {
-        font-size: 6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .im {
-        font-size: 3rem;
-    }
-
-    .name {
-        font-size: 7rem;
-    }
-
-    .starter {
-        font-size: 1.2rem;
-    }
-}
-
-/* ================= DEBUG ================= */
-
-/* * {
-    outline: 1px solid red;
+    z-index: 2;
+    pointer-events: none;
 } */

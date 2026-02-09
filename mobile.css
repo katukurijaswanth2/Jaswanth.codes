@@ -10,6 +10,9 @@
     .mobile-hero{
         display: block;
     }
+    .hero-container{
+        display: none;
+    }
     .large-screen{
         display: none;
     }

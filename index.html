@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
     <link rel="stylesheet" href="style.css">
 
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="curve.css">
     <link rel="stylesheet" href="largeScreen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-      <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Birthstone&family=Cormorant+SC:wght@400;600&family=Fleur+De+Leah&family=Lavishly+Yours&family=Trade+Winds&family=Meie+Script&family=Lugrasimo&display=swap"
@@ -50,7 +50,7 @@
                     <li><a href="#service-section">Services</a></li>
 
                     <li><a href="#service-section">Projects</a></li>
-                    <li class="resume"><a href="#" >RESUME</a></li>
+                    <li class="resume"><a href="#">RESUME</a></li>
                 </ul>
 
             </div>
@@ -92,70 +92,63 @@
 
 
 
-    <div class="large-screen">
-        <div class="nav-bar">
-            <nav>
-                <div class="logo-pic">
-                    <h1>JASH</h1>
+    <!-- <div class="large-screen"> -->
+    <div class="hero-container">
+        <div class="header-baru">
+            <header class="nav-bar">
+                <div class="logo">JASH</div>
+                <div class="class-nav">
+                    <ul class="nav-links">
+                        <li><a href="#About-Me">ABOUT ME</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#service-section">SERVICES</a></li>
+                        <li><a href="#service-section">PROJECTS</a></li>
+                        <li><a href="#" class="resume-btn-nav">RESUME</a></li>
+                    </ul>
                 </div>
-
-                <ul class="contact">
-                    <li><a href="#About-Me">About me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#service-section">Services</a></li>
-
-                    <li><a href="#service-section">Projects</a></li>
-                    <li><a href="#" class="resume">RESUME</a></li>
-                </ul>
-
-            </nav>
+            </header>
         </div>
-        <div class="hero-content">
-            <h1 class="laptop-jaswanth">I am</h1>
-            <h1 class="laptop-jaswanth">JASWANTH KATUKURI</h1>
 
-            <h1>
-                <span id="role-text" class="typing"></span>
-            </h1>
+        <main class="hero-main">
+            <div class="hero-text">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">JASWANTH KATUKURI</h1>
+                <h2 class="role">Full-Stack Developer</h2>
+                <p class="description">
+                   Crafting impactful, scalable web applications. Solving real-world problems through clean, efficient code.
 
+Driven by the harmony of powerful back-end architecture and elegant front-end interfaces. Dedicated to building high-performance systems that prioritize scalability, performance, and user experience.
+                </p>
 
-
-
-            <div class="hero-buttons ">
-                <div class="large-links">
-
-                    <a href="https://www.linkedin.com/in/jaswanth-katukuri-a00a87307/" target="_blank"
-                        class="icon-link">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/jashuuuu.4/" target="_blank" class="icon-link">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="https://github.com/katukurijaswanth2" target="_blank" class="icon-link">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a href="https://mail.google.com/mail/?view=cm&to=katukurijaswanth2@gmail.com" target="_blank"
-                        class="icon-link">
-                        <i class="fa-regular fa-envelope"></i>
-                    </a>
-
-                    <a href="https://x.com/kjaswanth_2" target="_blank" class="icon-link">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-
-                    <!-- Resume Button -->
-                    <a href="./resume/Jaswanth_Katukuri_Resume.pdf" class="download-resume" download>
-                        Download Resume
-                    </a>
-
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
 
+                <a href="./resume/Jaswanth_Katukuri_Resume.pdf" class="download-btn" download>
+                    Download Resume <i class="fa-solid fa-chevron-right"></i>
+                </a>
             </div>
-        </div>
+
+            <div class="hero-image-container">
+                <div class="red-glow"></div>
+                <div class="red-curve"></div>
+
+<div class="profile-img-wrapper">
+    <img
+        src="./images/large-hero.png"
+        alt="Jaswanth Katukuri"
+        class="profile-img"
+    />
+</div>
+            </div>
+
+        </main>
     </div>
+    <!-- </div> -->
 
 
     <!-- - ----------------------------hero end here-------------------------- -->
@@ -200,19 +193,19 @@
 
     <!-- --------------------about me end here------------------------->
 
-<section class="growth-curve">
-  <div class="d3-chart">
-  <div class="title">
-            <span class="title-dark">My Growth </span>
-            <span class="title-cruve growth">Curve</span>
+    <section class="growth-curve">
+        <div class="d3-chart">
+            <div class="title">
+                <span class="title-dark">My Growth </span>
+                <span class="title-cruve growth">Curve</span>
+            </div>
+            <p class="subtitle">Progress isn’t linear — commitment is.</p>
+
+            <div id="growth-chart"></div>
         </div>
-    <p class="subtitle">Progress isn’t linear — commitment is.</p>
 
-    <div id="growth-chart"></div>
-  </div>
-
-  <div class="tooltip" id="growth-tooltip"></div>
-</section>
+        <div class="tooltip" id="growth-tooltip"></div>
+    </section>
 
 
     <!-- -------skills here -- -->
@@ -250,25 +243,25 @@
 
 
         <!-- --------------------   service end here  ------------------->
-<div class="parent-frontend">
-        <div class="front-end">
-            <div class="role-box">
-                <h1>FRONT END</h1>
-                <p>
-                    My frontend portfolio highlighting modern UI, responsive layouts,
-                    and interactive web experiences.
-                </p>
+        <div class="parent-frontend">
+            <div class="front-end">
+                <div class="role-box">
+                    <h1>FRONT END</h1>
+                    <p>
+                        My frontend portfolio highlighting modern UI, responsive layouts,
+                        and interactive web experiences.
+                    </p>
 
 
-                <span class="handle tl"></span>
-                <span class="handle tc"></span>
-                <span class="handle tr"></span>
-                <span class="handle bl"></span>
-                <span class="handle bc"></span>
-                <span class="handle br"></span>
+                    <span class="handle tl"></span>
+                    <span class="handle tc"></span>
+                    <span class="handle tr"></span>
+                    <span class="handle bl"></span>
+                    <span class="handle bc"></span>
+                    <span class="handle br"></span>
+                </div>
             </div>
         </div>
-</div>
 
         <div class="projects">
             <span class=" f-role">frontend</span>
@@ -357,7 +350,7 @@
 
     </script>
     <script src="scrollUp.js"></script>
-   <script src="graph.js"></script>
+    <script src="graph.js"></script>
 
 
 

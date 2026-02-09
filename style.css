@@ -316,7 +316,38 @@ nav {
     bottom: -4.3rem;
     left: 20rem;
 }
+.up-arrow {
+    position: fixed;
+    bottom: 2.3rem;
+    right: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+z-index: 2100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    background: conic-gradient(rgb(9, 255, 34) 0deg, #000000 0deg);
+}
+
+.progress-ring {
+    position: absolute;
+    inset: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.up-arrow img {
+    position: relative;
+    height: 70%;
+    width: 70%;
+    object-fit: contain;
+    z-index: 2100;
+    /* 🔥 must be higher */
+}
 @media (max-width: 600px) {
 
     .service {
@@ -422,11 +453,12 @@ nav {
     }
     .up-arrow{
         /* position: fixed; */
-        /* bottom: 0rem;
-        right: 0.5rem; */
+         bottom: 0rem;
+        right: 0.5rem;
+        padding:5px;
         z-index: 1000;
-        height: 0.2rem;
-        width: 0.2rem;
+        height: 2rem;
+        width: 2rem;
         box-sizing: content-box;
         /* display: none; */
     }
@@ -449,35 +481,3 @@ nav {
 /* ==========================================up arrow ======================*/
 
 
-.up-arrow {
-    position: fixed;
-    bottom: 2.3rem;
-    right: 2rem;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: conic-gradient(rgb(9, 255, 34) 0deg, #000000 0deg);
-}
-
-.progress-ring {
-    position: absolute;
-    inset: 6px;
-    background: #ffffff;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.up-arrow img {
-    position: relative;
-    height: 70%;
-    width: 70%;
-    object-fit: contain;
-    z-index: 100;
-    /* 🔥 must be higher */
-}
