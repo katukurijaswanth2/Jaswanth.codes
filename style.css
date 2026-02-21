@@ -6,7 +6,33 @@
 body{
     width: 100%;
     box-sizing: border-box;
+    /* cursor: url(./images/mvc.svg),auto; */
+    scrollbar-color: white red;
  
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 253, 253);
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+        background: url("https://p7.hiclipart.com/preview/1004/932/967/arrow-computer-icons-clip-art-red-arrow-png.jpg") center center no-repeat;
+    background-size: cover;
+   background-size: 90px 90px;
+   /* background: transparent; */
+   background-position: center;
+
+
+    /* border-radius: 999px; */
+    /* border: 1px solid rgb(255, 255, 255);  */
+}
+body::selection{
+    background: rgb(107, 30, 45);
+    color: #ffffff;
 }
 
 .nav-bar {
