@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    clickSound.volume = 0.2;
+    clickSound.volume = 0.3;
 
     function playClick() {
         clickSound.currentTime = 0;

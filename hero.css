@@ -63,31 +63,7 @@ border: 1px solid white;
     /* padding-left: 2rem; */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2.8rem;
-    /* background-color: black; */
-    color:var(--bg-black);
-}
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    /* padding: 20px; */
-    letter-spacing: 1px;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
-    /* background-color: #d32f2f; */
-    /* padding: 10px; */
-    box-sizing: border-box;
-}
 
 nav{
     background-color: #1a1a1a;
@@ -288,33 +264,3 @@ nav{
     overflow: visible;
 }
 
-/* Star Ray Overlay – overlaps hero container */
-/* .hero-container::after {
-    content: "";
-    position: absolute;
-    inset: -25%;
-
-    background:
-        radial-gradient(
-            circle at 72% 42%,
-            rgba(30, 30, 30, 0),
-            rgba(0, 0, 0, 0) 25%,
-            rgba(0, 0, 0, 0.7) 55%
-        ),
-        radial-gradient(
-            circle at 65% 60%,
-            rgba(3, 3, 3, 0.51),
-            rgba(0, 0, 0, 0) 45%
-        ),
-        linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0)
-        );
-
-    filter: blur(90px);
-    opacity: 0.75;
-
-    z-index: 2;
-    pointer-events: none;
-} */

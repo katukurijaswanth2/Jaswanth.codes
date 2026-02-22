@@ -1,5 +1,48 @@
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    /* background-color: black; */
+    color:var(--bg-black);
+}
 
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    /* padding: 20px; */
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    /* background-color: #d32f2f; */
+    /* padding: 10px; */
+    box-sizing: border-box;
+}
+.nav-links a:not(.resume-btn-nav) {
+    position: relative;
+}
+
+/* Underline animation */
+.nav-links a:not(.resume-btn-nav)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:not(.resume-btn-nav):hover::after {
+    width: 100%;
+}
 
 .large-screen {
     height: 100vh;
@@ -59,7 +102,162 @@
     display: flex;
     gap: 15px;
 }
+.social-links a {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideIn 0.6s ease forwards;
+}
 
+/* Staggered delays */
+.social-links a:nth-child(1) { animation-delay: 0.1s; }
+.social-links a:nth-child(2) { animation-delay: 0.2s; }
+.social-links a:nth-child(3) { animation-delay: 0.3s; }
+.social-links a:nth-child(4) { animation-delay: 0.4s; }
+.social-links a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* animation code starts ahere  */
+/* Initial hidden state */
+.hero-text > *:not(.social-links) {
+    opacity: 0;
+}
+
+/* Greeting → soft fade + slight rise */
+.greeting {
+    transform: translateY(15px);
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.1s;
+}
+
+/* Name → slide from left (strong entrance) */
+.name {
+    transform: translateX(-60px);
+    animation: slideRight 0.7s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Role → subtle blur reveal */
+.role {
+    filter: blur(10px);
+    animation: blurIn 0.6s ease forwards;
+    animation-delay: 0.55s;
+}
+
+/* Description → smooth fade */
+.description {
+    transform: translateY(10px);
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.75s;
+}
+
+/* Social icons → your sliding stagger effect */
+.social-links a {
+    position: relative;          /* REQUIRED for liquid effect */
+    overflow: hidden;            /* hides rising fill */
+    z-index: 1;
+
+    /* your existing styles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideRight 0.5s ease forwards;
+
+    width: 55px;                 /* typical social icon size */
+    height: 55px;
+    border-radius: 50%;
+    padding: 20px;
+    /* border: 1px solid #d32f2f; */
+    /* color: #d32f2f; */
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* WATER BACKGROUND */
+.social-links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #d32f2f;
+    transition: bottom 0.45s ease;
+    z-index: -1;
+}
+
+/* WAVE TOP */
+.social-links a::after {
+    content: "";
+    position: absolute;
+    left: -20%;
+    bottom: -100%;
+    width: 140%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 40%;
+    transition: bottom 0.45s ease;
+}
+
+/* HOVER ANIMATION */
+.social-links a:hover::before {
+    bottom: 0;
+}
+
+.social-links a:hover::after {
+    bottom: calc(100% - 15px);
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+/* Button → gentle pop / scale */
+.download-btn {
+    display: inline-block;
+    transform: scale(0.8);
+    animation: popIn 0.5s ease forwards;
+    animation-delay: 1.6s;
+}
+
+/* Keyframes */
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes blurIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }}
+
+/* animation code ends here */
 .btn {
     padding: 12px 28px;
     font-size: 1rem;
