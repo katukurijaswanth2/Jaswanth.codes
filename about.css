@@ -6,6 +6,10 @@
     background-color:white;
     min-height: 77vh;
     z-index: 1000;
+    background: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* ===== TITLE ===== */
@@ -84,13 +88,34 @@ text-align: justify;
 /* ===== ARROW ===== */
 .arrow {
     position: absolute;
-    bottom: 1%;
+    bottom: 10%;
     right: 37%;
 
     height: 10rem;
     width: clamp(10rem, 10vw, 7rem);
     z-index: 100;
     transform: rotate(10deg);
+}
+#About-Me {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/back.jpg) no-repeat center / cover;
+}
+
+/* Wave attached to bottom */
+.wave-divider {
+    position: absolute;
+    bottom: -1px;   
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 120px;
 }
 
 .arrow img {
@@ -114,6 +139,19 @@ text-align: justify;
     object-fit: cover;
 }
 
+
+.wave-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* height: 3rem; */
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .matter {

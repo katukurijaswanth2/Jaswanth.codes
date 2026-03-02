@@ -1,19 +1,22 @@
-
 /* ================= MOBILE HERO ================= */
 
 .mobile-hero {
     background-color: #000000;
     display: none;
     border: none;
+
 }
-@media (max-width: 600px){
-    .mobile-hero{
+
+@media (max-width: 600px) {
+    .mobile-hero {
         display: block;
     }
-    .hero-container{
+
+    .hero-container {
         display: none;
     }
-    .large-screen{
+
+    .large-screen {
         display: none;
     }
 }
@@ -44,6 +47,37 @@
     box-sizing: content-box;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  
+    
+}
+.menu-circle {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    background: #0f5f2e; /* dark green */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 170px;
+    padding-top: 170px;
+    z-index: 10;
+}
+
+/* Menu text */
+
+
+/* Hamburger icon */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: #2eff7b; /* light green lines like screenshot */
+    font-size: 2rem;
 }
 
 .hamburger i {
@@ -58,7 +92,7 @@
 
 .contact-parent {
     display: none;
-    
+
 }
 
 .contactm {
@@ -72,8 +106,10 @@
     list-style: none;
     position: absolute;
     border-radius: 15px;
-    
-   height: auto;
+
+font-weight: 600;
+
+    height: auto;
     box-sizing: content-box;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -83,9 +119,10 @@
 .contactm li {
     padding: 10px;
     padding-left: 20px;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid; */
     text-transform: uppercase;
-  
+
+
     /* margin-left: 1rem; */
 }
 
@@ -94,10 +131,12 @@
     text-decoration: none;
     color: white;
 }
-.contactm .resume{
+
+.contactm .resume {
     background-color: red;
-   
+
 }
+
 .contactm i {
     /* margin-left: 1rem; */
     font-weight: bolder;
@@ -131,9 +170,15 @@
 .profile-content {
     position: relative;
     margin-top: -20px;
-    background: #ffffff;
+    background: url(images/back.jpg);
+    background-repeat: no-repeat;
+    /* Prevent repeating */
+    background-size: cover;
+    /* Fill entire element */
+    background-position: center;
     border-radius: 32px 32px 0 0;
     padding: 32px 20px 28px;
+    /* padding-bottom: 30px; */
     text-align: center;
     z-index: 5;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.12);
@@ -211,5 +256,7 @@
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: italic;
+ padding-bottom: 20px;
+ height: 300px;
     /* padding-bottom: 20px; */
 }
