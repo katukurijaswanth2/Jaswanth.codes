@@ -103,20 +103,6 @@ text-align: justify;
     background: url(images/back.jpg) no-repeat center / cover;
 }
 
-/* Wave attached to bottom */
-.wave-divider {
-    position: absolute;
-    bottom: -1px;   
-    left: 0;
-    width: 100%;
-    line-height: 0;
-}
-
-.wave-divider svg {
-    display: block;
-    width: 100%;
-    height: 120px;
-}
 
 .arrow img {
     height: 100%;

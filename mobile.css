@@ -26,9 +26,10 @@
 .profile-card {
     max-width: 100%;
     border-radius: 24px 24px 0px 0px;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: #fff;
-    height: 100dvh;
+    /* height: 100dvh; */
+    height: auto;
     position: relative;
 }
 
@@ -50,22 +51,7 @@
   
     
 }
-.menu-circle {
-    position: absolute;
-    top: -150px;
-    left: -150px;
-    width: 300px;
-    height: 300px;
-    background: #0f5f2e; /* dark green */
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 170px;
-    padding-top: 170px;
-    z-index: 10;
-}
+
 
 /* Menu text */
 
@@ -170,8 +156,10 @@ font-weight: 600;
 .profile-content {
     position: relative;
     margin-top: -20px;
-    background: url(images/back.jpg);
-    background-repeat: no-repeat;
+
+    /* background: url(images/back.jpg); */
+    background-color: white;
+   
     /* Prevent repeating */
     background-size: cover;
     /* Fill entire element */
@@ -182,6 +170,7 @@ font-weight: 600;
     text-align: center;
     z-index: 5;
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.12);
+    /* border-bottom:  1px solid red ; */
 }
 
 .profile-content h2 {
@@ -256,7 +245,7 @@ font-weight: 600;
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: italic;
- padding-bottom: 20px;
- height: 300px;
+ /* padding-bottom: 20px; */
+
     /* padding-bottom: 20px; */
 }
