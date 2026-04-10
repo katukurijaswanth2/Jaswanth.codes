@@ -1,130 +1,121 @@
-/* ================= GLOBAL SAFETY FIX ================= */
-html,
-body {
+
+
+/* GLOBAL */
+html, body {
+  /* margin: 0;
+  padding: 0;
+  background: #0b0b0b;
+  font-family: Arial, sans-serif; */
   overflow-x: hidden;
 }
-
-/* ================= Growth Curve Section ================= */
-
+.title-dark{
+  color: white;
+}
+/* SECTION */
 .growth-curve {
+  margin: 0;
+  padding: 0;
+  background: #0b0b0b;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
   width: 100%;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
-  position: relative;
-  box-sizing: border-box;
 }
 
-.growth-curve .d3-chart {
+.d3-chart {
   width: 100%;
   max-width: 1100px;
 }
 
-.growth-curve h1 {
+/* TITLE */
+.title {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 6px;
+  font-size: 34px;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.growth-curve .subtitle {
+.subtitle {
   text-align: center;
   color: #aaa;
   font-size: 14px;
   margin-bottom: 40px;
 }
 
-/* ================= SVG ================= */
-
-.growth-curve svg {
+/* SVG */
+svg {
   width: 100%;
   height: auto;
-  overflow: visible;
 }
 
-.growth-curve .axis path,
-.growth-curve .axis line {
+/* AXIS */
+.axis path,
+.axis line {
   stroke: #333;
 }
 
-.growth-curve .axis text {
+.axis text {
   fill: #777;
   font-size: 12px;
 }
 
-/* ================= Curve ================= */
-
-.growth-curve .curve {
+/* BLUE LINE */
+.curve {
   fill: none;
-  stroke: url(#line-gradient);
-  stroke-width: 4;
+  stroke: #3b82f6;
+  stroke-width: 3;
 }
 
-/* ================= Dots ================= */
+/* SHADED AREA */
+.area {
+  fill: url(#area-gradient);
+}
 
-.growth-curve .dot {
+/* DOTS */
+.dot {
   fill: #ffffff;
-  stroke: #ff2d2d;
+  stroke: #3b82f6;
   stroke-width: 2;
   cursor: pointer;
-  transition: fill 0.2s ease;
 }
 
-.growth-curve .dot:hover {
-  fill: #ff2d2d;
+.dot:hover {
+  fill: #3b82f6;
 }
 
-/* ================= Tooltip ================= */
-
-.growth-curve .tooltip {
+/* TOOLTIP */
+.tooltip {
   position: fixed;
   background: #111;
-  border: 1px solid #ff2d2d;
+  border: 1px solid #3b82f6;
   padding: 10px 14px;
   border-radius: 6px;
   font-size: 13px;
   color: #fff;
   pointer-events: none;
-  box-shadow: 0 0 15px rgba(255, 45, 45, 0.3);
   opacity: 0;
-  transition: opacity 0.2s ease;
-  z-index: 9999;
+  z-index: 999;
   max-width: 260px;
-  box-sizing: border-box;
 }
 
-.growth-curve .tooltip span {
-  color: #ff2d2d;
-  font-weight: 600;
+.tooltip span {
+  color: #3b82f6;
+  font-weight: bold;
 }
 
-.growth{
-    padding-left: 18rem;
-    padding-top: 2rem;
-}
-
-
-
-
-/* ================= Mobile ================= */
-
+/* MOBILE */
 @media (max-width: 768px) {
-  
-.growth{
-    width: 100%;
-    padding-left: 11rem;
-    padding-top: 1.5rem;
-}
-
-  .growth-curve h1 {
-    font-size: 24px;
+  .title {
+    font-size: 26px;
   }
 
-  .growth-curve .subtitle {
+  .subtitle {
     font-size: 12px;
-    margin-bottom: 25px;
   }
 
-  .growth-curve .axis text {
+  .axis text {
     font-size: 10px;
   }
 }

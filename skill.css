@@ -2,6 +2,7 @@
   height: auto;
   margin-bottom: 1.9rem;
   padding-bottom: 1rem;
+  background-color: #ebebebbc;
   /* border: 1px solid red; */
 }
 
@@ -87,7 +88,7 @@
 
 .skill-cruve {
   /* color: #7ac943; */
-  color: red;
+  color:#4169E1;
   font-family: "Allison", cursive;
   font-weight: 400;
   font-style: normal;

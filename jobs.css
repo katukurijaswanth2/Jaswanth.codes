@@ -6,50 +6,34 @@
   max-width: 100%;
   box-sizing: border-box;
   background-color: white;
-  /* width: 80%; */
 }
-/* body{
-  background-color: rgb(228, 231, 234);
-}
-.parent-frontend{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .role-box {
   position: relative;
   padding: 60px 120px;
   min-width: 90%;
   max-width: 90%;
-  border: 5px dashed rgba(255, 0, 0, 0.35);
-box-sizing: border-box;
+  border: 5px dashed rgba(65, 105, 225, 0.35);
+  box-sizing: border-box;
   color: #000000;
   margin: 20px;
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-
-
 .role-box h1 {
   font-size: 120px;
   font-weight: 800;
-
-  color: red;
+  color: #4169E1;
 }
 
 .role-box p {
   margin-top: 20px;
   font-size: 1.7rem;
-  /* outline: 1px solid red; */
   width: 100%;
-text-align: justify;
-  /* margin-left: auto;
-  margin-right: auto; */
+  text-align: justify;
   opacity: 1;
   font-weight: 500;
 }
@@ -60,12 +44,8 @@ text-align: justify;
   width: 1rem;
   height: 1rem;
   font-weight: bolder;
-  /* width: 100%; */
-  background: red;
-
+  background: #4169E1;
 }
-
-
 
 /* Top row */
 .tl {
@@ -101,8 +81,7 @@ text-align: justify;
   right: -6px;
 }
 
-/* ----------------------------------------------------------------------------------------------- */
-
+/* PROJECT SECTION */
 .projects {
   position: relative;
 }
@@ -120,26 +99,23 @@ text-align: justify;
 }
 
 .project {
-  color: red;
+  color: #4169E1;
   font-family: "Allison", cursive;
   font-weight: 400;
   font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 5rem;
   z-index: 4;
   position: absolute;
   top: 0.8rem;
   left: 14rem;
-  /* padding-left: 2rem; */
   width: 300px;
-  /* outline: 1px solid red; */
-
-
   text-transform: capitalize;
 }
+
+/* MOBILE */
 @media (max-width: 600px) {
 
   .front-end {
@@ -154,7 +130,7 @@ text-align: justify;
   }
 
   .role-box h1 {
-    font-size: 3rem; /* was 120px */
+    font-size: 3rem;
     text-align: center;
   }
 
@@ -163,13 +139,11 @@ text-align: justify;
     text-align: left;
   }
 
-  /* Handles smaller */
   .handle {
     width: 0.7rem;
     height: 0.7rem;
   }
 
-  /* ---- PROJECT TITLE ---- */
   .f-role {
     margin-left: 0;
     font-size: 3.5rem;
@@ -180,13 +154,14 @@ text-align: justify;
   .project {
     position: static;
     font-size: 2.7rem;
-    /* width: auto; */
     z-index: 11;
     font-weight: 500;
     margin-left: 1rem;
     margin-top: -2rem;
   }
 }
+
+/* TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
 
   .role-box {
@@ -203,7 +178,6 @@ text-align: justify;
     font-size: 1.3rem;
   }
 
-  /* ---- PROJECT TITLE ---- */
   .f-role {
     font-size: 3rem;
     margin-left: 2rem;
