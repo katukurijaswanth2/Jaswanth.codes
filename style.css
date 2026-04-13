@@ -256,7 +256,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: conic-gradient(rgb(9, 255, 34) 0deg, #000000 0deg);
+    background: conic-gradient(rgb(35, 110, 208) 0deg, #000000 0deg);
 }
 
 .progress-ring {
@@ -281,13 +281,15 @@ nav {
     .table-of {
         font-size: 3.5rem;
         font-weight: 700;
-        margin-left: -1rem;
+        margin-left: 1rem;
     }
 
     .service-content {
         font-size: 2.8rem;
         position: static;
-        padding-left: 14rem;
+        padding-left: 10rem;
+        margin-top: -2.6rem;
+      
     }
 
     .roles-container {
@@ -311,7 +313,8 @@ nav {
         font-family: "Allison", cursive;
         color: #4169E1;
         position: static;
-        margin-left: -2.3rem;
+        margin-top: 1rem;
+        margin-left: -3rem;
     }
 
     .up-arrow{
