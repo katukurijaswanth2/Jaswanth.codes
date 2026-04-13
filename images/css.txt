@@ -1,0 +1,257 @@
+:root {
+    --bg-black: #0a0a0a;
+
+    /* MAIN BLUE THEME */
+    --accent-blue: #2563eb;        /* primary blue */
+    --accent-blue-light: #3b82f6;  /* lighter blue */
+    --accent-blue-glow: #60a5fa;   /* glow effect */
+
+    --text-gray: #b0b0b0;
+    --white: #ffffff;
+}
+
+/* HERO BACKGROUND */
+.hero-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle at top right, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+/* NAVBAR */
+.nav-bar {
+
+    width: 100%;
+    max-width: 1300px;
+    height: 68px;
+
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    margin: 20px auto;
+
+}
+
+/* HEADER */
+.header-baru {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #1a1a1a;
+}
+
+/* BUTTON */
+.resume-btn-nav {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    padding: 0.6rem 1.6rem;
+    border-radius: 999px;
+
+    font-weight: 600 !important;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+
+    color: #ffffff !important;
+
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+}
+
+/* HERO CONTENT */
+.hero-main {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    height: calc(100vh - 100px);
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 5;
+}
+
+.greeting,
+.name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.name {
+    font-weight: 900;
+}
+
+.role {
+    color: var(--accent-blue);
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.description {
+    max-width: 450px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white);
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.social-links i {
+    font-size: 2rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-blue);
+    transform: translateY(-3px);
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 1rem 2rem;
+    background: var(--accent-blue);
+
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* IMAGE */
+.hero-image-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* BLUE GLOW (REPLACED RED) */
+.red-glow {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    height: 80%;
+
+    background: radial-gradient(circle,
+        rgba(59, 130, 246, 0.6) 0%,
+        rgba(59, 130, 246, 0) 70%
+    );
+
+    filter: blur(40px);
+    z-index: 1;
+}
+
+/* PROFILE IMAGE */
+.profile-img-wrapper {
+    position: relative;
+    height: 100%;
+    left: 5.6rem;
+
+    display: flex;
+    align-items: flex-end;
+    z-index: -3;
+}
+
+.profile-img {
+    height: 105%;
+    object-fit: contain;
+
+    filter: drop-shadow(-30px 0 60px rgba(0, 0, 0, 0.75));
+}
+
+/* DARK OVERLAY */
+.profile-img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.55) 35%,
+        rgba(0, 0, 0, 0.25) 60%,
+        rgba(0, 0, 0, 0)
+    );
+
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* DECORATIVE BLUE CURVE */
+.red-curve {
+    position: relative;
+    bottom: -10%;
+    right: -10%;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+/* FIX LAYERING */
+.hero-container {
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+}

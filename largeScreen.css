@@ -189,7 +189,7 @@
     bottom: -100%;
     width: 100%;
     height: 100%;
-    background-color: #d32f2f;
+    background-color: #5b4bec;
     transition: bottom 0.45s ease;
     z-index: -1;
 }
@@ -268,12 +268,12 @@
 }
 
 .btn.primary {
-    background-color: #e50914; /* Netflix red */
+    background-color: #2a18fb; /* Netflix red */
     color: #fff;
 }
 
 .btn.primary:hover {
-    background-color: #f40612;
+    background-color: #6505ff;
 }
 
 .btn.secondary {
